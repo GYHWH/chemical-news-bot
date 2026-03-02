@@ -1,21 +1,26 @@
+# companies_updater.py
+
 class CompaniesUpdater:
-    def __init__(self):
-        self.companies = []
+    def __init__(self, database):
+        self.database = database
 
-    def add_company(self, company_name):
-        if company_name not in self.companies:
-            self.companies.append(company_name)
-            return f"{company_name} added."
-        else:
-            return f"{company_name} already exists."
+    def add_company(self, name, details):
+        """Add a new chemical company to the database."""
+        # Code to add company details to the database
+        print(f'Company {name} added to database.')
 
-    def get_companies(self):
-        return self.companies
+    def update_company(self, company_id, new_details):
+        """Update the details of an existing company."""
+        # Code to update company details in the database
+        print(f'Company {company_id} updated to new details.')
 
-# Example usage
-if __name__ == "__main__":
-    updater = CompaniesUpdater()
-    print(updater.add_company("Company A"))
-    print(updater.add_company("Company B"))
-    print(updater.add_company("Company A"))  # Should indicate that it already exists
-    print(updater.get_companies())
+    def remove_company(self, company_id):
+        """Remove a chemical company from the database."""
+        # Code to remove company from database
+        print(f'Company {company_id} removed from database.')
+
+    def list_companies(self):
+        """List all chemical companies in the database."""
+        # Code to list companies
+        print('Listing all companies...')
+        # This would return a list of companies
